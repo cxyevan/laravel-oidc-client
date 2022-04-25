@@ -35,5 +35,11 @@
                 "Maicol07\\OIDCClient\\OIDCServiceProvider"
             ]
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:bouffekai/oidc-client-php.git"
+        }
+    ]
 }
