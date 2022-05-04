@@ -5,7 +5,7 @@
     "require": {
         "php": ">=8.0",
         "laravel/framework": "^9",
-        "bouffekai/oidc-client-php": "master@dev"
+        "bouffekai/oidc-client-php": "dev-master"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
