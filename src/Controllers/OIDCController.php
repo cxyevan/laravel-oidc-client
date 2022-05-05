@@ -32,9 +32,10 @@ class OIDCController extends Controller
     /**
      * @throws Exception
      */
-    final public function login(): RedirectResponse
+    final public function login()
     {
-        return redirect()->away($this->guard()->getAuthorizationUrl());
+        return response()->json($this->guard()->getAuthorizationUrl());
+        // return redirect()->away($this->guard()->getAuthorizationUrl());
     }
 
     /**
