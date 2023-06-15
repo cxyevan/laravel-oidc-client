@@ -1,5 +1,5 @@
 {
-    "name": "bouffekai/laravel-oidc-client",
+    "name": "cxyevan/laravel-oidc-client",
     "version": "1.0.0",
     "license": "MIT",
     "require": {
@@ -40,7 +40,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "git@github.com:bouffekai/oidc-client-php.git"
+            "url": "git@github.com:cxyevan/oidc-client-php.git"
         }
     ]
 }

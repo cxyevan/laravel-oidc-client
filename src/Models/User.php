@@ -34,22 +34,25 @@ use Illuminate\Foundation\Auth\User as LaravelUser;
  */
 class User extends LaravelUser
 {
-    public string $name;
-    public string $given_name;
-    public string $family_name;
-    public string $middle_name;
-    public string $nickname;
-    public string $preferred_username;
-    public string $profile;
-    public string $picture;
-    public string $website;
-    public string $email;
-    public bool $email_verified;
-    public string $gender;
-    public string $birthdate;
-    public string $zoneinfo;
-    public string $locale;
-    public string $phone_number;
-    public bool $phone_number_verified;
-    public array $address;
+    public string $unique_name; // Domain + NT-account
+    public string $upn;  // NT-account@bosch.com
+    public string $udn; // display name
+    // public string $name;
+    // public string $given_name;
+    // public string $family_name;
+    // public string $middle_name;
+    // public string $nickname;
+    // public string $preferred_username;
+    // public string $profile;
+    // public string $picture;
+    // public string $website;
+    // public string $email;
+    // public bool $email_verified;
+    // public string $gender;
+    // public string $birthdate;
+    // public string $zoneinfo;
+    // public string $locale;
+    // public string $phone_number;
+    // public bool $phone_number_verified;
+    // public array $address;
 }

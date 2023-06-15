@@ -1,4 +1,6 @@
-<?php /** @noinspection UnusedFunctionResultInspection */
+<?php
+
+/** @noinspection UnusedFunctionResultInspection */
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -9,7 +11,7 @@ class AddOidcFieldsToUsers extends Migration
     final public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $column = $table->uuid('uuid')->index();
+            $column = $table->string('unique_name')->index();
             if (Schema::hasColumn('users', 'id')) {
                 $column->after('id');
             }
@@ -20,7 +22,7 @@ class AddOidcFieldsToUsers extends Migration
     final public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('uuid');
+            $table->dropColumn('unique_name');
         });
     }
 }

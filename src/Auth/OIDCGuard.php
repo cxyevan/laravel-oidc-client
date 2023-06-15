@@ -39,7 +39,7 @@ class OIDCGuard extends SessionGuard
     final public function getUserInfo(): UserInfo
     {
         $this->oidc->authenticate();
-        return $this->oidc->getUserInfo();
+        return $this->oidc->getJWTUserInfo();
     }
 
     /**
@@ -50,7 +50,7 @@ class OIDCGuard extends SessionGuard
         if ($user_info === null) {
             $user_info = $this->getUserInfo();
         }
-        return $this->provider->retrieveByInfo($user_info);
+        return $this->provider->retrieveByClaimInfo($user_info);
     }
 
     final public function login(User|Authenticatable $user, $remember = false): bool
